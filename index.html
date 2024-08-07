@@ -5,49 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D2's Autobodyshop</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            overflow: hidden;
+        @media screen and (max-width: 500px) {
+            .header {
+                    background-image: linear-gradient(to right, pink, purple);
+                    font-size: 220px;
+                }
+            body {
+                background-color: rgba(58, 51, 118, 0);
+            }
+            .header {
+                width: 100vw; 
+                height: 90px;
+                position: fixed;
+                top: 0; 
+                left: 0; 
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 10px;
+                background-color: red;
+                background-image: linear-gradient(to right, red , black);
+                box-shadow: 10px 2px 30px 12px red;
+                font-size: 9px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .buttons {
+                display: flex;
+                gap: 5px;
+            }
+            .buttons a {
+                padding: 0px 5px;
+                margin-right: 15px;
+            }
+            .repo {
+                color: black;
+                position: absolute;
+                bottom: 90px; 
+                right: 85px;
+                max-width: calc(100% - 20px); 
+            }
+            .repo span {
+                display: block; 
+            }
+            .mail1, .about1 {
+                border-style: solid;
+                border-width: 2px;
+                border-color: white;
+                border-radius: 10px;
+                color: white;
+                text-decoration: none; 
+            }
+            .about1 {
+                padding-right: 5px;
+            }
+            .content {
+                margin-top: 90px; 
+                min-height: calc(100vh - 90px); 
+                background-image: url('wallpaper.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%; 
+                background-position: center bottom;
+                padding: 20px;
+                font-size: 16px;
+
+            }
         }
-        .header {
-            width: 100vw; 
-            height: 90px;
-            position: fixed;
-            top: 0; 
-            left: 0; 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 10px;
-            background-color: red;
-            background-image: linear-gradient(to right, red , black);
-            box-shadow: 10px 2px 30px 12px red;
-            font-size: 10px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-        .header h1 {
-            margin: 0;
-            flex-grow: 1;
-        }
-        .buttons {
-            display: flex;
-            gap: 5px;
-        }
-        .buttons a {
-            padding: 5px 10px;
-            margin-right: 30px;
-        }
-        .mail1, .about1 {
-            border-style: solid;
-            border-width: 2px;
-            border-color: white;
-            border-radius: 10px;
-            color: white;
-            text-decoration: none; 
-        }
-        .content {
+        @media screen and (min-width: 501px) {
+            .content {
             margin-top: 90px; 
             min-height: calc(100vh - 90px); 
             background-image: url('notnotnotdas.png');
@@ -56,17 +80,62 @@
             background-position: center bottom;
             padding: 20px;
             font-size: 16px;
+            }
+            body {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow: hidden;
+            }
+            .header {
+                width: 100vw; 
+                height: 90px;
+                position: fixed;
+                top: 0; 
+                left: 0; 
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 10px;
+                background-color: red;
+                background-image: linear-gradient(to right, red , black);
+                box-shadow: 10px 2px 30px 12px red;
+                font-size: 10px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .header h1 {
+                margin: 0;
+                flex-grow: 1;
+            }
+            .buttons {
+                display: flex;
+                gap: 5px;
+            }
+            .buttons a {
+                padding: 5px 10px;
+                margin-right: 30px;
+            }
+            .mail1, .about1 {
+                border-style: solid;
+                border-width: 2px;
+                border-color: white;
+                border-radius: 10px;
+                color: white;
+                text-decoration: none; 
+            }
+
+            .repo {
+                color: black;
+                position: absolute;
+                bottom: 90px; 
+                right: 160px;
+                max-width: calc(100% - 20px); 
+            }
+            .repo span {
+                display: block; 
+            }
         }
-        .repo {
-            color: black;
-            position: absolute;
-            bottom: 90px; 
-            right: 160px;
-            max-width: calc(100% - 20px); 
-        }
-        .repo span {
-            display: block; 
-        }
+    
     </style>
 </head>
 <body>
@@ -74,7 +143,7 @@
         <h1>Welcome to D2s Autobody Shop</h1>
         <div class="buttons">
             <a class ="about1" href="d2sautobodyshop-main.zip"Download>Download</a>
-            <a href="mailto:theincompetents@gmail.com" class="mail1">Contact Us!</a>
+            <a class = "mail1" href="mailto:theincompetents@gmail.com" class="mail1">Contact Us!</a>
         </div>
     </div>
     <div class="content">
